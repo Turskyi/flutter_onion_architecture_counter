@@ -1,8 +1,8 @@
-// User Interface Component
 import 'package:counter_with_onion_architecture/core/application_services/counter_presenter.dart';
 import 'package:counter_with_onion_architecture/core/domain/model/counter.dart';
 import 'package:flutter/material.dart';
 
+// User Interface Component
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
     required this.title,
@@ -18,8 +18,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void _incrementCounter() => widget.presenter.increment();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: widget.presenter.increment,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),

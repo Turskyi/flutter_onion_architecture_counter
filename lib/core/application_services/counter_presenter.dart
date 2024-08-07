@@ -1,9 +1,9 @@
-// Application Services Layer
 import 'dart:async';
 
 import 'package:counter_with_onion_architecture/core/domain/model/counter.dart';
 import 'package:counter_with_onion_architecture/core/domain/services/increment_counter.dart';
 
+/// Application Services Layer
 class CounterPresenter {
   CounterPresenter(this.incrementCounter) {
     incrementCounter.counterStream.listen(_updateCounter);

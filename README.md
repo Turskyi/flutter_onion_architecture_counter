@@ -1,6 +1,6 @@
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://stand-with-ukraine.pp.ua)
 [![style: flutter lints](https://img.shields.io/badge/style-flutter__lints-blue)](https://pub.dev/packages/flutter_lints)
-[![Code Quality](https://github.com/Turskyi/flutter_onion_architecture_counter/actions/workflows/code-quality-tests.yml/badge.svg?branch=master&event=push)](https://github.com/flutter/flutter/wiki/Style-guide-for-Flutter-repo)
+[![Code Quality](https://github.com/Turskyi/flutter_onion_architecture_counter/actions/workflows/code-quality-tests.yml/badge.svg?branch=master&event=push)](https://github.com/flutter/flutter/blob/master/docs/contributing/Style-guide-for-Flutter-repo.md)
 [![codecov](https://codecov.io/gh/Turskyi/flutter_onion_architecture_counter/graph/badge.svg?token=CHHAH6OHDE)](https://codecov.io/gh/Turskyi/flutter_onion_architecture_counter)
 <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Turskyi/flutter_onion_architecture_counter">
 

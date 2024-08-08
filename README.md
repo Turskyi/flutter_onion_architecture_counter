@@ -13,7 +13,7 @@ Onion Architecture, originally introduced by
 [Jeffrey Palermo](https://jeffreypalermo.com/about/) in his article
 [The Onion Architecture](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/).
 
-The default counter app is often criticized for its simplicity and lack of
+The default "counter" app is often criticized for its simplicity and lack of
 real-world applicability. This example showcases a more maintainable and
 scalable approach, incorporating immutability, dependency injection, and
 reactive state management
@@ -38,7 +38,7 @@ The project follows the four main layers of Onion Architecture:
 ### Domain Model Layer
 
 Contains the `Counter` entity. This layer does not depend on anything else,
-which is evident from the imports in the class.
+which is clear from the imports in the class.
 
 ### Domain Services Layer
 
@@ -78,13 +78,13 @@ The simplified structure of the project is as follows:
 ```
 lib/
 ├── main.dart
-├── core/
-│   ├── application_services/
-│   └── domain/
-│       ├── model/
-│       └── services/
+├── user_interface/
 ├── infrastructure/
-└── user_interface/
+└── core/
+    ├── application_services/
+    └── domain/
+        ├── model/
+        └── services/
 ```
 
 ## Getting Started

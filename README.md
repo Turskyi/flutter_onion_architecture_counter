@@ -29,7 +29,7 @@ using [streams](https://dart.dev/libraries/async/using-streams).
 
 The project follows the four main layers of Onion Architecture:
 
-1. **Domain Model**: Core business logic and entities.
+1. **Domain Model**: Core business logic and models.
 2. **Domain Services**: Business rules and operations.
 3. **Application Services**: Application-specific logic and orchestration.
 4. **Outermost Layer**: Includes User Interface, Infrastructure (DB and/or WS),
@@ -253,27 +253,34 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({required this.presenter, super.key});
+
+  final CounterPresenter presenter;
 
   @override
   Widget build(BuildContext context) {
-    final FakeCounterDataSource dataSource = FakeCounterDataSource();
-    final IncrementCounterFakeImpl incrementCounter =
-    IncrementCounterFakeImpl(dataSource);
-    final CounterPresenter presenter = CounterPresenter(incrementCounter);
-
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Onion Architecture Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorSchemeSeed: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page', presenter: presenter),
+      home: MyHomePage(
+        title: 'Onion Architecture Demo Home Page',
+        presenter: presenter,
+      ),
     );
   }
 }
 
-void main() => runApp(const MyApp());
+void main() {
+  final FakeCounterDataSource dataSource = FakeCounterDataSource();
+  final IncrementCounter incrementCounter = IncrementCounterFakeImpl(
+    dataSource,
+  );
+  final CounterPresenter presenter = CounterPresenter(incrementCounter);
+  runApp(MyApp(presenter: presenter));
+}
 
 // Infrastructure Component
 abstract interface class CounterDataSource {

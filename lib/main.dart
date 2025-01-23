@@ -1,6 +1,7 @@
 import 'package:counter_with_onion_architecture/core/application_services/counter_presenter.dart';
 import 'package:counter_with_onion_architecture/core/domain/services/increment_counter.dart';
 import 'package:counter_with_onion_architecture/core/domain/services/increment_counter_fake_impl.dart';
+import 'package:counter_with_onion_architecture/infrastructure/counter_data_source.dart';
 import 'package:counter_with_onion_architecture/infrastructure/fake_counter_data_source.dart';
 import 'package:counter_with_onion_architecture/user_interface/my_app.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ import 'package:flutter/material.dart';
 /// Changes to [main] do not affect any other component in the system, as they
 /// are decoupled from it and remain unaffected by its modifications.
 void main() {
-  final FakeCounterDataSource dataSource = FakeCounterDataSource();
+  final CounterDataSource dataSource = FakeCounterDataSource();
   final IncrementCounter incrementCounter = IncrementCounterFakeImpl(
     dataSource,
   );

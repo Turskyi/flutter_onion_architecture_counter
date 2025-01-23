@@ -274,7 +274,7 @@ class MyApp extends StatelessWidget {
 }
 
 void main() {
-  final FakeCounterDataSource dataSource = FakeCounterDataSource();
+  final CounterDataSource dataSource = FakeCounterDataSource();
   final IncrementCounter incrementCounter = IncrementCounterFakeImpl(
     dataSource,
   );

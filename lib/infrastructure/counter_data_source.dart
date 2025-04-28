@@ -1,7 +1,6 @@
-// Infrastructure Component
 import 'package:counter_with_onion_architecture/core/domain/model/counter.dart';
 
-// Infrastructure Component
+// Infrastructure Component.
 abstract interface class CounterDataSource {
   const CounterDataSource();
 

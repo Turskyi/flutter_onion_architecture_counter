@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 /// The [main] function represents the ultimate detail — the lowest-level policy
 /// in the system.
 /// It serves as the initial entry point of the application, and nothing, other
-/// than the operating system, depends on it.
+/// than the operating system (such as iOS, Android, etc.), depends on it.
 /// In the [main] function, dependencies are injected and configurations are
 /// set up.
 /// This makes [main] a low-level module located in the outermost circle of the

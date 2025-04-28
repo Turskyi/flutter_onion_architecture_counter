@@ -2,7 +2,7 @@ import 'package:counter_with_onion_architecture/core/application_services/counte
 import 'package:counter_with_onion_architecture/core/domain/model/counter.dart';
 import 'package:flutter/material.dart';
 
-// User Interface Component
+// User Interface Component.
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
     required this.title,
